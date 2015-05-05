@@ -11,11 +11,18 @@ app.get('/', function(req, res){
 	res.render("index")
 })
 
-app.get('/game', function(req, res){
+app.get('/player', function(req, res){
 	res.redirect("/");
 })
-app.get('/game/:id', function(req, res){
-	res.render("game", {id : req.params.id})
+app.get('/player/:id', function(req, res){
+	res.render("player", {id : req.params.id})
+})
+
+app.get('/server', function(req, res){
+	res.redirect("/");
+})
+app.get('/server/:id', function(req, res){
+	res.render("server", {id : req.params.id})
 })
 
 app.listen(8080);
