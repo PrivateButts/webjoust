@@ -1,2 +1,7 @@
-div
-	p=id
+extends base.jade
+block body
+	div.container
+		p.col-md-3=id
+		div.sticker.playerimg.col-md-6(id='playerimg')
+	
+	script(src='/js/player.js')

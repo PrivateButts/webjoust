@@ -1,6 +1,12 @@
-div
-	h1 Webjoust!
-	button Create Game
-	p Game ID:&nbsp
-		input
-		button Join!
+extends ./base.jade
+block body
+	div.row
+		div.col-md-3
+		div.col-md-6
+			h1.center Webjoust!
+			button(style="width:100%;padding:0px;margin:0px") Create Game
+			
+			div.row
+				p.col-xs-5 Game ID:&nbsp
+				input.col-xs-5
+				button.col-xs-1 Join!
