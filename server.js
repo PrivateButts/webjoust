@@ -2,7 +2,6 @@ var http = require('http');
 var express = require('express');
 var jade = require('jade');
 var avatar = require('avatar-generator')({
-    //Optional settings. Default settings in 'settings.js' 
     order:'background face clothes head hair eye mouth'.split(' '), //order in which sprites should be combined 
     images:require('path').join(__dirname,'./node_modules/avatar-generator/img'), // path to sprites 
     convert:'convert' //Path to imagemagick convert 

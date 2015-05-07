@@ -1,4 +1,8 @@
 extends base.jade
+
+block additionalheadstuff
+	script(src='/js/player.js')
+
 block body
 	div.container
 		div.col-md-3
@@ -13,4 +17,3 @@ block body
 				span(id='z')
 		div.sticker.playerimg.col-md-6(id='playerimg')
 	
-	script(src='/js/player.js')

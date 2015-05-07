@@ -1,4 +1,23 @@
 extends base.jade
 
+block additionalheadstuff
+	script(src='/js/jquery.qrcode.min.js')
+	
+
 block body
-	button start
+	div.container
+		div.col-md-3
+			h2 Webjoust!
+			h3 Game ID:  
+				span(id='GameID')=id
+			h5 Please join the game using your smart device by going to the home page and typing in the Game ID or by scanning in the QRCode below.
+			div(id='qrcode')
+			
+		div.container
+			div.container
+				button(style='width:100%') start
+			div(id='Players')
+	
+	
+	
+	script(src='/js/host.js')
