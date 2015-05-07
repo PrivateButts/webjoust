@@ -1,7 +1,16 @@
 extends base.jade
 block body
 	div.container
-		p.col-md-3=id
+		div.col-md-3
+			p(id='GameID')=id
+			p max:
+				span(id='max')
+			p x:
+				span(id='x')
+			p y:
+				span(id='y')
+			p z:
+				span(id='z')
 		div.sticker.playerimg.col-md-6(id='playerimg')
 	
 	script(src='/js/player.js')

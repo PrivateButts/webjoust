@@ -40,4 +40,24 @@ app.get('/genimage/:gender/:name', function(req, res){
 	plimg.pipe(res);
 })
 
-app.listen(8080);
+
+var server = http.createServer(app);
+var io = require('socket.io')(server);
+
+io.on('connection', function(socket){
+	socket.on('disconnect', function(){
+		console.log('user disconnected');
+	});
+	
+	socket.on('playerjoin', function(message){
+		socket.join(message['gameid'])
+		console.log("User joined room "+message['gameid'])
+	})
+	
+	socket.on('playerout', function(message){
+		io.to(message['gameid']).emit('playerout', {name:name})
+	})
+});
+
+
+server.listen(8080);
